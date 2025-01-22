@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>ru.school21.edu</groupId>
+    <artifactId>chaseLogic</artifactId>
+    <version>1.0</version>
+
+    <developers>
+        <developer>
+            <id>greaterr</id>
+            <name>Timur</name>
+            <email>greaterr@student.21-school.ru</email>
+            <organization>School21</organization>
+        </developer>
+        <developer>
+            <id>arboriob</id>
+            <name>Artur</name>
+            <email>arboriob@student.21-school.ru</email>
+            <organization>School21</organization>
+        </developer>
+        <developer>
+            <id>loquatsr</id>
+            <name>Danil</name>
+            <email>loquatsr@student.21-school.ru</email>
+            <organization>School21</organization>
+        </developer>
+    </developers>
+
+    <properties>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.diogonunes</groupId>
+            <artifactId>JColor</artifactId>
+            <version>5.5.1</version>
+        </dependency>
+    </dependencies>
+    <build>
+        <resources>
+            <resource>
+                <directory>ex00/Game/src/main/resources</directory>
+                <includes>
+                    <include>**/*</include>
+                </includes>
+            </resource>
+        </resources>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.11.0</version>
+            </plugin>
+            <plugin>
+                <artifactId>maven-resources-plugin</artifactId>
+                <version>3.3.1</version>
+            </plugin>
+        </plugins>
+    </build>
+
+
+
+</project>
