@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: ex03.src.test.java.edu.school21.chat.AppTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.024 s -- in ex03.src.test.java.edu.school21.chat.AppTest

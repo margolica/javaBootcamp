@@ -1,0 +1,6 @@
+edu/school21/chat/models/chatroom/Chatroom.class
+edu/school21/chat/models/user/User.class
+edu/school21/chat/repositories/MessagesRepositoryJdbcImpl.class
+edu/school21/chat/app/Program.class
+edu/school21/chat/repositories/MessagesRepository.class
+edu/school21/chat/models/message/Message.class

@@ -1,5 +1,6 @@
 package edu.school21.numbers.model;
 
+import edu.school21.numbers.NumberWorker;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!--PreProcessor-->
+   <bean id="PreProcessorToLower"
+         class="edu.school21.PreProcessor.PreProcessorToLower">
+   </bean>
+
+   <bean id="PreProcessorToUpperImpl"
+         class="edu.school21.PreProcessor.PreProcessorToUpperImpl">
+   </bean>
+
+<!--Renderer-->
+   <bean id="RendererErrImplToUpperImpl"
+         class="edu.school21.Renderer.RendererErrImpl">
+      <constructor-arg ref="PreProcessorToUpperImpl"/>
+   </bean>
+
+   <bean id="RendererStandardImplToUpper"
+         class="edu.school21.Renderer.RendererStandardImpl">
+      <constructor-arg ref="PreProcessorToUpperImpl"/>
+   </bean>
+
+   <bean id="RendererErrImplToLower"
+         class="edu.school21.Renderer.RendererErrImpl">
+      <constructor-arg ref="PreProcessorToLower"/>
+   </bean>
+
+   <bean id="RendererStandardImplToLower"
+         class="edu.school21.Renderer.RendererStandardImpl">
+      <constructor-arg ref="PreProcessorToLower"/>
+   </bean>
+
+   <!--   Printer-->
+   <bean id="PrinterWithPrefixImplErrToLower"
+         class="edu.school21.Printer.PrinterWithPrefixImpl">
+      <constructor-arg ref="RendererErrImplToLower"/>
+   </bean>
+
+   <bean id="PrinterWithDateTimeImplErrToUpperImpl"
+         class="edu.school21.Printer.PrinterWithDateTimeImpl">
+      <constructor-arg ref="RendererErrImplToUpperImpl"/>
+   </bean>
+
+   <bean id="PrinterWithPrefixImplStandardToLower"
+         class="edu.school21.Printer.PrinterWithPrefixImpl">
+      <constructor-arg ref="RendererStandardImplToLower"/>
+   </bean>
+
+   <bean id="PrinterWithDateTimeImplStandardToUpper"
+         class="edu.school21.Printer.PrinterWithDateTimeImpl">
+      <constructor-arg ref="RendererStandardImplToUpper"/>
+   </bean>
+
+</beans>
